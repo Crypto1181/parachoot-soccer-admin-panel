@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Modal } from '@/components/ui/modal';
-import { Plus, Pencil, Trash2, Video, Calendar, Search, Filter, Clock, RefreshCw, Download, Save } from 'lucide-react';
+import { Plus, Pencil, Trash2, Video, Calendar, Search, Clock, RefreshCw } from 'lucide-react';
 import { syncMatchesFromFlashscore } from '@/lib/flashscore';
 import { flashscoreApi } from '@/lib/flashscoreApi';
 import { cn } from '@/lib/utils';
@@ -34,7 +34,6 @@ interface Match {
 export default function MatchManager() {
   const [matches, setMatches] = useState<Match[]>([]);
   const [teams, setTeams] = useState<Team[]>([]);
-  const [loading, setLoading] = useState(true);
   const [syncing, setSyncing] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingMatch, setEditingMatch] = useState<Match | null>(null);
@@ -128,8 +127,6 @@ export default function MatchManager() {
 
     } catch (error) {
       console.error('Error fetching data:', error);
-    } finally {
-      setLoading(false);
     }
   };
 

@@ -62,7 +62,7 @@ export const syncMatchesFromFlashscore = async (date: Date) => {
             }
 
             // 4. Upsert Match
-            const { error } = await supabase
+            await supabase
                 .from('matches')
                 .upsert({
                     id: fsMatch.match_id, // Use Flashscore ID as our ID if possible, or mapping

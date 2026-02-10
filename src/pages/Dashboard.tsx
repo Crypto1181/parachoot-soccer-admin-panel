@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Eye, PlayCircle, TrendingUp, ArrowUpRight, Activity, Tv, Megaphone } from "lucide-react";
+import { TrendingUp, ArrowUpRight, Activity, Tv, Megaphone } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { supabase } from '@/lib/supabase';
 import { flashscoreApi } from '@/lib/flashscoreApi';

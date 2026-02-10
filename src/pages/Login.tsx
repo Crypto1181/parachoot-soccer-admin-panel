@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Lock, Mail, ArrowRight, Tv, UserPlus, LogIn } from 'lucide-react';
+import { Lock, Mail, ArrowRight, Tv, UserPlus } from 'lucide-react';
 
 export default function Login() {
   const [email, setEmail] = useState('sponky33333@gmail.com');
