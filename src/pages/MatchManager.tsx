@@ -58,7 +58,6 @@ export default function MatchManager() {
 
   const fetchData = async () => {
     try {
-      setLoading(true);
       
       // 1. Fetch DB Matches
       const [matchesRes, teamsRes] = await Promise.all([
